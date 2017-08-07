@@ -37,9 +37,17 @@ function myCli() {
     elif [ "$PROJ" = "nd" ];
     then
         CWD="/home/conor/workspace/workshop/national-day"
+    elif [ "$PROJ" = "cli-shell" ];
+    then
+        CWD="/home/conor/workspace/workshop/cli-shell"
+    elif [ "$PROJ" = "clish" ];
+    then
+        CWD="/home/conor/workspace/workshop/cli-shell"
     elif [ "$PROJ" = "none provided" ];
     then
-        CWD="/home/conor/workspace/olaf_client"
+        CWD=$(pwd)
+    else
+        echo "${clired}Unknown project: ${PROJ}${cliwhite}"
     fi
     
     # Change to cwd
